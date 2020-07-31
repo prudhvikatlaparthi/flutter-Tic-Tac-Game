@@ -1,6 +1,6 @@
-# dummyapp
+## Flutter TicTac Game
 
-A new Flutter project.
+A Quarantine time-pass game.
 
 ## Getting Started
 
