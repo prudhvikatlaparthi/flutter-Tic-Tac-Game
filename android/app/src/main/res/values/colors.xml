@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#365063</color>
+    <color name="colorPrimaryDark">#365063</color>
+    <color name="colorAccent">#365063</color>
+    <color name="tranparency">#00000000</color>
+    <color name="snackbackground">#365063</color>
+    <color name="snacktext">#FFFFFF</color>
+</resources>
