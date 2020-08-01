@@ -1,6 +1,6 @@
-import 'package:dummyapp/help/common-utils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_game/help/common-utils.dart';
 
 class CustomDialog extends StatelessWidget {
   final String title, description;
@@ -18,7 +18,7 @@ class CustomDialog extends StatelessWidget {
   Widget build(BuildContext context) {
     return Dialog(
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(CommonUtils.padding),
+        borderRadius: BorderRadius.circular(padding),
       ),
       elevation: 0.0,
       backgroundColor: Colors.transparent,
@@ -31,17 +31,17 @@ class CustomDialog extends StatelessWidget {
       children: <Widget>[
         Container(
           padding: EdgeInsets.only(
-            top: CommonUtils.avatarRadius + CommonUtils.padding,
-            bottom: CommonUtils.padding,
-            left: CommonUtils.padding,
-            right: CommonUtils.padding,
+            top: avatarRadius + padding,
+            bottom: padding,
+            left: padding,
+            right: padding,
           ),
-          margin: EdgeInsets.only(top: CommonUtils.avatarRadius),
+          margin: EdgeInsets.only(top: avatarRadius),
           decoration: new BoxDecoration(
             image: DecorationImage(
                 image: AssetImage('assets/alert.png'), fit: BoxFit.cover),
             shape: BoxShape.rectangle,
-            borderRadius: BorderRadius.circular(CommonUtils.padding),
+            borderRadius: BorderRadius.circular(padding),
             boxShadow: [
               BoxShadow(
                 color: Colors.black26,
@@ -100,15 +100,15 @@ class CustomDialog extends StatelessWidget {
           ),
         ),
         Positioned(
-          left: CommonUtils.padding,
-          right: CommonUtils.padding,
+          left: padding,
+          right: padding,
           child: CircleAvatar(
             backgroundColor: Colors.white,
-            radius: CommonUtils.avatarRadius,
+            radius: avatarRadius,
             child: Image(
               image: AssetImage(src),
-              width: CommonUtils.avatarRadius * 1.5,
-              height: CommonUtils.avatarRadius * 1.5,
+              width: avatarRadius * 1.5,
+              height: avatarRadius * 1.5,
             ),
           ),
         ),

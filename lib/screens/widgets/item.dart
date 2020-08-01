@@ -1,5 +1,5 @@
-import 'package:dummyapp/constants/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_game/constants/colors.dart';
 
 class Item extends StatelessWidget {
   final int flag;
@@ -7,7 +7,7 @@ class Item extends StatelessWidget {
   const Item({
     Key key,
     @required this.flag,
-    @required  this.value,
+    @required this.value,
   }) : super(key: key);
 
   @override

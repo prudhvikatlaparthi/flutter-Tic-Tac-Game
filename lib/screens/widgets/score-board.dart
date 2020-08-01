@@ -1,14 +1,16 @@
-import 'package:dummyapp/constants/colors.dart';
-import 'package:dummyapp/model/tictactoe.dart';
-import 'package:dummyapp/screens/widgets/score-card.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_game/constants/colors.dart';
+import 'package:flutter_game/model/tictactoe.dart';
+import 'package:flutter_game/screens/widgets/score-card.dart';
 import 'package:provider/provider.dart';
 
 class ScoreBoard extends StatelessWidget {
   final String p1Name;
   final String p2Name;
   ScoreBoard({
-    Key key, this.p1Name, this.p2Name,
+    Key key,
+    this.p1Name,
+    this.p2Name,
   }) : super(key: key);
 
   @override
@@ -46,7 +48,7 @@ class ScoreBoard extends StatelessWidget {
           SizedBox(
             height: 5,
           ),
-          ScoreCard(p1Name: p1Name, p2Name : p2Name),
+          ScoreCard(p1Name: p1Name, p2Name: p2Name),
           SizedBox(
             height: 5,
           ),

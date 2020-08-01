@@ -1,6 +1,6 @@
-import 'package:dummyapp/constants/dimens.dart';
-import 'package:dummyapp/help/common-utils.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_game/constants/dimens.dart';
+import 'package:flutter_game/help/common-utils.dart';
 
 class VerticalSeparator extends StatelessWidget {
   const VerticalSeparator({
@@ -12,7 +12,7 @@ class VerticalSeparator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double value = CommonUtils.getWidth(context);
+    double value = getWidth(context);
     // print('size $value');
     return Container(
       width: separatorWidth,
@@ -31,9 +31,9 @@ class HorizontalSeparator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double value = CommonUtils.getWidth(context);
+    double value = getWidth(context);
     return Container(
-      width: value *0.85,
+      width: value * 0.85,
       height: separatorWidth,
       color: colorCode,
     );

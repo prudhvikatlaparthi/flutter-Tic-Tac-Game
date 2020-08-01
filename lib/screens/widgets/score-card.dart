@@ -1,6 +1,6 @@
-import 'package:dummyapp/constants/colors.dart';
-import 'package:dummyapp/model/tictactoe.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_game/constants/colors.dart';
+import 'package:flutter_game/model/tictactoe.dart';
 import 'package:provider/provider.dart';
 
 class ScoreCard extends StatelessWidget {

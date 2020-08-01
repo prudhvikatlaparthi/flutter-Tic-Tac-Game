@@ -1,8 +1,9 @@
-import 'package:dummyapp/help/common-utils.dart';
-import 'package:dummyapp/model/tictactoe.dart';
-import 'package:dummyapp/screens/widgets/item.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_game/help/common-utils.dart';
+import 'package:flutter_game/model/tictactoe.dart';
 import 'package:provider/provider.dart';
+
+import 'item.dart';
 
 class TicImage extends StatelessWidget {
   final String src;
@@ -21,8 +22,8 @@ class TicImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TicTacToe ticTacToe = Provider.of<TicTacToe>(context);
-    double value = CommonUtils.getWidth(context);
-    int position = CommonUtils.getPosition(rowPosition, columnPosition);
+    double value = getWidth(context);
+    int position = getPosition(rowPosition, columnPosition);
     // print('ti-image $rowPosition $columnPosition');
     return GestureDetector(
         onTap: () => itemClicked(rowPosition, columnPosition),
@@ -44,13 +45,13 @@ class TicImage extends StatelessWidget {
                         ticTacToe.places[position] == 4
                     ? Item(
                         flag: 1,
-                        value: value/5,
+                        value: value / 5,
                       )
                     : ticTacToe.places[position] == 0 ||
                             ticTacToe.places[position] == 3
                         ? Item(
                             flag: 0,
-                            value: value/5,
+                            value: value / 5,
                           )
                         : SizedBox.shrink());
           },
