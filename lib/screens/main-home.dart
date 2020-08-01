@@ -1,7 +1,8 @@
-import 'package:dummyapp/constants/colors.dart';
-import 'package:dummyapp/screens/player-names.dart';
-import 'package:dummyapp/screens/widgets/my-button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_game/constants/colors.dart';
+
+import 'player-names.dart';
+import 'widgets/my-button.dart';
 
 class MainHomePage extends StatelessWidget {
   @override
@@ -24,7 +25,10 @@ class MainHomePage extends StatelessWidget {
                   fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 20),
-            MyButton(onButtonClick: () => onSubmit(context),buttonName: 'Start Game',),
+            MyButton(
+              onButtonClick: () => onSubmit(context),
+              buttonName: 'Start Game',
+            ),
           ],
         ),
       )),

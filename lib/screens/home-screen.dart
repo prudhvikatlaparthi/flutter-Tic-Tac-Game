@@ -1,17 +1,17 @@
 import 'dart:async';
 
-import 'package:dummyapp/constants/colors.dart';
-import 'package:dummyapp/constants/implementations.dart';
-import 'package:dummyapp/help/common-utils.dart';
-import 'package:dummyapp/model/tictactoe.dart';
-import 'package:dummyapp/screens/widgets/back-arrow.dart';
-import 'package:dummyapp/screens/widgets/refresh.dart';
-import 'package:dummyapp/screens/widgets/row_item.dart';
-import 'package:dummyapp/screens/widgets/score-board.dart';
-import 'package:dummyapp/screens/widgets/separator.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_game/constants/colors.dart';
+import 'package:flutter_game/constants/implementations.dart';
+import 'package:flutter_game/help/common-utils.dart';
+import 'package:flutter_game/model/tictactoe.dart';
 import 'package:provider/provider.dart';
 import 'package:vibration/vibration.dart';
+
+import 'widgets/back-arrow.dart';
+import 'widgets/row_item.dart';
+import 'widgets/score-board.dart';
+import 'widgets/separator.dart';
 
 final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
@@ -132,7 +132,7 @@ class _HomeScreenState extends State<HomeScreen> {
     if (!isClickable) {
       return;
     }
-    int counter = CommonUtils.getPosition(r, c);
+    int counter = getPosition(r, c);
     if (ticTacToe.places[counter] == 2) {
       ticTacToe.places[counter] = activePlayer;
       if (activePlayer == 0) {
@@ -201,15 +201,14 @@ class _HomeScreenState extends State<HomeScreen> {
         ticTacToe.places[win[1]] = 3;
         ticTacToe.places[win[2]] = 3;
         ticTacToe.numbCrossWins++;
-        openDialog('${widget.p1Name} wins...', 'Congratulations...',
-            CommonUtils.CROSS_IMG);
+        openDialog('${widget.p1Name} wins...', 'Congratulations...', CROSS_IMG);
       } else {
         ticTacToe.places[win[0]] = 4;
         ticTacToe.places[win[1]] = 4;
         ticTacToe.places[win[2]] = 4;
         ticTacToe.numbCircleWins++;
-        openDialog('${widget.p2Name} wins...', 'Congratulations...',
-            CommonUtils.CIRCLE_IMG);
+        openDialog(
+            '${widget.p2Name} wins...', 'Congratulations...', CIRCLE_IMG);
       }
     } else {
       draw = true;
@@ -232,7 +231,7 @@ class _HomeScreenState extends State<HomeScreen> {
     }
     if (draw) {
       ticTacToe.numbDraws++;
-      openDialog('Stalemate...', 'Lucky Game...', CommonUtils.STALEMATE_IMG);
+      openDialog('Stalemate...', 'Lucky Game...', STALEMATE_IMG);
     }
   }
 

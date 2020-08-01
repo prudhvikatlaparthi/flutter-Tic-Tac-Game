@@ -1,11 +1,12 @@
 import 'dart:async';
 
-import 'package:dummyapp/constants/implementations.dart';
-import 'package:dummyapp/help/common-utils.dart';
-import 'package:dummyapp/screens/widgets/item.dart';
-import 'package:dummyapp/screens/main-home.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_game/constants/implementations.dart';
+import 'package:flutter_game/help/common-utils.dart';
 import 'package:package_info/package_info.dart';
+
+import 'main-home.dart';
+import 'widgets/item.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -35,7 +36,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    double value = CommonUtils.getWidth(context);
+    double value = getWidth(context);
     return new Scaffold(
       body: Container(
           child: Column(

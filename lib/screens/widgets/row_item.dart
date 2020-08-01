@@ -1,7 +1,8 @@
-import 'package:dummyapp/constants/colors.dart';
-import 'package:dummyapp/screens/widgets/separator.dart';
-import 'package:dummyapp/screens/widgets/tic-image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_game/constants/colors.dart';
+import 'package:flutter_game/screens/widgets/separator.dart';
+
+import 'tic-image.dart';
 
 class RowItem extends StatelessWidget {
   final int blockColor_1;

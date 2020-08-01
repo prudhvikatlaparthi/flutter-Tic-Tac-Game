@@ -1,5 +1,5 @@
-import 'package:dummyapp/constants/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_game/constants/colors.dart';
 
 class MyButton extends StatelessWidget {
   final Function onButtonClick;

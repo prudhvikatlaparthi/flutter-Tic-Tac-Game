@@ -1,8 +1,9 @@
-import 'package:dummyapp/constants/colors.dart';
-import 'package:dummyapp/screens/select-icon.dart';
-import 'package:dummyapp/screens/widgets/back-arrow.dart';
-import 'package:dummyapp/screens/widgets/my-button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_game/constants/colors.dart';
+
+import 'select-icon.dart';
+import 'widgets/back-arrow.dart';
+import 'widgets/my-button.dart';
 
 class PlayerNames extends StatelessWidget {
   var player1Controller = TextEditingController();

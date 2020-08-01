@@ -1,11 +1,12 @@
-import 'package:dummyapp/constants/colors.dart';
-import 'package:dummyapp/constants/implementations.dart';
-import 'package:dummyapp/help/common-utils.dart';
-import 'package:dummyapp/screens/home-screen.dart';
-import 'package:dummyapp/screens/widgets/back-arrow.dart';
-import 'package:dummyapp/screens/widgets/item.dart';
-import 'package:dummyapp/screens/widgets/my-button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_game/constants/colors.dart';
+import 'package:flutter_game/constants/implementations.dart';
+import 'package:flutter_game/help/common-utils.dart';
+
+import 'home-screen.dart';
+import 'widgets/back-arrow.dart';
+import 'widgets/item.dart';
+import 'widgets/my-button.dart';
 
 class SelectIcon extends StatefulWidget {
   final String p1Name;
@@ -24,7 +25,7 @@ class _SelectIconState extends State<SelectIcon> {
 
   @override
   Widget build(BuildContext context) {
-    double value = CommonUtils.getWidth(context);
+    double value = getWidth(context);
     return Scaffold(
         resizeToAvoidBottomPadding: false,
         body: SafeArea(
